@@ -1,0 +1,247 @@
+/* =========================================================================
+   DESIGN SYSTEM — single source of truth.
+   Clean, light, minimal profile aesthetic (Wall of Portfolios style).
+   Every component pulls colour, type, spacing, motion and layout from
+   these tokens. Nothing below should hardcode a raw value.
+   ========================================================================= */
+
+:root {
+  /* ---- Colour (dark theme) -------------------------------------------- */
+  --bg:        #0b0b0d;   /* page background          */
+  --surface:   #151417;   /* cards                    */
+  --surface-2: #1e1d21;   /* subtle fills, chips      */
+  --ink:       #f1efe9;   /* primary text / buttons   */
+  --ink-2:     #b2aea6;   /* secondary text           */
+  --ink-3:     #78756e;   /* tertiary / labels        */
+  --line:      rgba(241, 239, 233, 0.13);  /* borders  */
+  --line-soft: rgba(241, 239, 233, 0.07);
+  --accent:    #f1efe9;   /* primary action           */
+  --green:     #4ade80;   /* "open to work"           */
+  --green-bg:  rgba(74, 222, 128, 0.12);
+  --yellow:    #f6c63e;   /* legacy accent            */
+  --blue:      #82c8ff;   /* primary CTA              */
+
+  /* ---- Type ------------------------------------------------------------ */
+  --font-sans:    var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-mono:    var(--font-mono), ui-monospace, monospace;
+
+  /* fluid type scale — restrained for a clean profile */
+  --t-display: clamp(2.4rem, 1.4rem + 4.4vw, 4.6rem);
+  --t-h1:    clamp(2rem, 1.4rem + 2.6vw, 3.1rem);
+  --t-h2:    clamp(1.5rem, 1.2rem + 1.3vw, 2rem);
+  --t-h3:    clamp(1.15rem, 1rem + 0.6vw, 1.4rem);
+  --t-lead:  clamp(1.05rem, 1rem + 0.35vw, 1.2rem);
+  --t-body:  1rem;
+  --t-sm:    0.875rem;
+  --t-xs:    0.78rem;
+  --t-label: 0.72rem;
+
+  /* ---- Spacing scale (8px base) --------------------------------------- */
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-3: 1.5rem;
+  --s-4: 2rem;
+  --s-5: 3rem;
+  --s-6: 4rem;
+  --s-7: 6rem;
+  --s-8: 8rem;
+
+  /* ---- Layout ---------------------------------------------------------- */
+  --max:       760px;   /* the clean narrow column        */
+  --max-wide:  1080px;  /* work grid can breathe a little  */
+  --gutter:    clamp(1.25rem, 5vw, 2rem);
+  --radius:    16px;
+  --radius-sm: 10px;
+
+  /* ---- Elevation ------------------------------------------------------- */
+  --shadow:    0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+
+  /* ---- Motion ---------------------------------------------------------- */
+  --ease:     cubic-bezier(0.22, 1, 0.36, 1);
+  --dur:      0.5s;
+  --dur-fast: 0.22s;
+}
+
+/* =========================================================================
+   RESET
+   ========================================================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* lock scroll while the intro plays */
+html.intro-lock, html.intro-lock body { overflow: hidden; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+::selection { background: var(--ink); color: var(--bg); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* =========================================================================
+   PRIMITIVES — reused everywhere
+   ========================================================================= */
+
+/* narrow centred column — the spine of the clean layout */
+.shell {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.shell--wide { max-width: var(--max-wide); }
+
+/* clears the fixed nav for sub-pages that have no full-height hero */
+.page { padding-top: clamp(5.5rem, 4rem + 6vw, 8rem); }
+
+/* section rhythm */
+.section { padding-block: var(--s-6); }
+
+/* small uppercase mono label above a section */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--t-label);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* headings */
+.h2 {
+  font-size: var(--t-h2);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* generic pill / chip */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: var(--t-sm);
+  color: var(--ink-2);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 0.4em 0.85em;
+}
+
+/* buttons — all CTAs share this base for a consistent look */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-size: var(--t-sm);
+  font-weight: 600;
+  padding: 0.7em 1.35em;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  top: 0;
+  transition: background var(--dur-fast) var(--ease),
+              border-color var(--dur-fast) var(--ease),
+              color var(--dur-fast) var(--ease),
+              top var(--dur-fast) var(--ease);
+}
+
+/* logo-gradient glow that wraps behind the button (blue left, orange right) */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #6fb1f1, #f4a44d, #6fb1f1, #f4a44d, #6fb1f1);
+  background-size: 300% 100%;
+  filter: blur(14px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease);
+}
+
+/* matching logo-gradient border ring (same gradient + same motion) */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(90deg, #6fb1f1, #f4a44d, #6fb1f1, #f4a44d, #6fb1f1);
+  background-size: 300% 100%;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease);
+}
+
+/* hover only lifts + reveals the glow/border — the fill never changes */
+.btn:hover { top: -1px; }
+.btn:hover::before,
+.btn:hover::after { opacity: 0.9; animation: btnGlow 2.4s linear infinite; }
+.btn:hover::after { opacity: 1; }
+
+/* primary matches the secondary: dark fill, with the gradient border + glow
+   revealed only on hover (no border at rest). */
+
+@keyframes btnGlow {
+  to { background-position: 300% 0; }
+}
+
+/* animated underline link */
+.ulink { position: relative; display: inline-block; }
+.ulink::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -1px;
+  width: 100%; height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur) var(--ease);
+}
+.ulink:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* card surface */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* scroll-reveal: components add .reveal, JS toggles .is-in */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.reveal.is-in { opacity: 1; transform: none; }

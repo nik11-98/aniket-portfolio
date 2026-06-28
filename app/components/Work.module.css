@@ -1,0 +1,75 @@
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2);
+  margin-bottom: var(--s-4);
+}
+.range {
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  color: var(--ink-3);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-5);
+}
+
+.card { display: block; }
+
+/* image panel — the mockup sits inside a soft rounded frame */
+.panel {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.shot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.card:hover .shot { transform: scale(1.03); }
+
+/* circular corner action, like the reference */
+.corner {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: #18181b;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform var(--dur-fast) var(--ease);
+}
+.card:hover .corner { transform: translate(2px, -2px); }
+
+.meta {
+  padding: var(--s-3) 0.25rem 0;
+}
+.title {
+  font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.desc {
+  margin-top: 0.5rem;
+  font-size: var(--t-lead);
+  line-height: 1.45;
+  color: var(--ink-3);
+  max-width: 42ch;
+}
+
+@media (min-width: 760px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: var(--s-6) var(--s-5); }
+}

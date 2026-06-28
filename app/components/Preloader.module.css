@@ -1,0 +1,84 @@
+.wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #000;
+  transition: opacity 0.7s var(--ease);
+}
+
+/* fades out to reveal the page */
+.leaving {
+  opacity: 0;
+}
+
+.word {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 1.4rem + 4vw, 3.6rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  /* rainbow gradient clipped to the (sans) text */
+  background: linear-gradient(
+    90deg,
+    #1f9e6e 0%,
+    #5fbf3c 13%,
+    #e7c61d 27%,
+    #f59331 42%,
+    #ef4d44 56%,
+    #e8519a 70%,
+    #9b5de5 84%,
+    #5a9fd6 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  /* light glow tinted with the font's rainbow gradient */
+  filter:
+    drop-shadow(0 0 14px rgba(95, 191, 60, 0.22))
+    drop-shadow(0 0 22px rgba(245, 147, 49, 0.2))
+    drop-shadow(0 0 28px rgba(232, 81, 154, 0.2))
+    drop-shadow(0 0 36px rgba(90, 159, 214, 0.22));
+  /* each greeting fades in and out */
+  animation: helloFade 1.3s var(--ease) both;
+}
+
+/* small horizontal line loader near the bottom */
+.loader {
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(120px, 18vw, 180px);
+  height: 3px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+}
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 45%;
+  border-radius: 3px;
+  background: #fff;
+  animation: loaderSlide 1.2s ease-in-out infinite;
+}
+
+@keyframes loaderSlide {
+  0%   { transform: translateX(-120%); }
+  100% { transform: translateX(260%); }
+}
+
+@keyframes helloFade {
+  0%   { opacity: 0; transform: translateY(6px); }
+  18%  { opacity: 1; transform: none; }
+  82%  { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(-6px); }
+}
+

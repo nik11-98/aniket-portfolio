@@ -1,0 +1,42 @@
+.footer {
+  border-top: 1px solid var(--line);
+  margin-top: var(--s-5);
+  padding-block: var(--s-7) var(--s-4);
+  text-align: center;
+}
+
+.cta {
+  display: grid;
+  justify-items: center;
+  gap: var(--s-2);
+}
+.big {
+  font-size: var(--t-h1);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.sub {
+  max-width: 42ch;
+  color: var(--ink-2);
+}
+.cta .btn { margin-top: var(--s-1); }
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s-1);
+  margin-top: var(--s-5);
+}
+
+.base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--s-2);
+  margin-top: var(--s-6);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+}

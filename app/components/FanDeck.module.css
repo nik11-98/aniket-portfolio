@@ -1,0 +1,75 @@
+.head {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: var(--s-1);
+  margin-bottom: var(--s-6);
+}
+.hint {
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+}
+.viewAll { margin-top: var(--s-2); }
+
+/* the fan — cards share a pivot well below, so rotating each splays an arc */
+.deck {
+  --spread: 6.5deg;
+  --card-w: 196px;
+  --card-h: 258px;
+  position: relative;
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  margin-top: var(--s-3);
+  transition: --spread 0.4s var(--ease);
+}
+.deck:hover { --spread: 9deg; }
+
+.card {
+  position: absolute;
+  bottom: 0;
+  width: var(--card-w);
+  height: var(--card-h);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  transform-origin: 50% 330px;
+  transform: rotate(calc((var(--i) - var(--mid)) * var(--spread)));
+  transition: transform 0.45s var(--ease), box-shadow 0.3s var(--ease),
+    filter 0.3s var(--ease);
+  will-change: transform;
+  cursor: pointer;
+}
+
+/* hovered card pops outward along its own axis and lifts above the rest */
+.card:hover {
+  transform: rotate(calc((var(--i) - var(--mid)) * var(--spread)))
+    translateY(-42px) scale(1.05);
+  z-index: 5;
+  box-shadow: 0 26px 56px rgba(0, 0, 0, 0.55);
+}
+/* dim the others while one is focused */
+.deck:hover .card { filter: brightness(0.82); }
+.deck .card:hover { filter: brightness(1); }
+
+.media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 820px) {
+  .deck { --card-w: 144px; --card-h: 190px; --spread: 5.5deg; height: 340px; }
+  .card { transform-origin: 50% 272px; }
+}
+@media (max-width: 520px) {
+  .deck { --card-w: 110px; --card-h: 146px; --spread: 5deg; height: 264px; }
+  .card { transform-origin: 50% 210px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .card:hover { transition: none; }
+}
