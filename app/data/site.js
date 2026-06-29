@@ -203,10 +203,166 @@ export const projects = [
   {
     id: "02",
     title: "Renteeez",
+    slug: "renteez",
     description:
       "Find and rent your ideal home remotely — a calmer rental marketplace.",
     image: "/work/w1.png",
-    href: "#contact",
+    href: "/work/renteez",
+    caseStudy: {
+      accent: "#7c4dff",
+      role: "Product Designer (team of 5)",
+      timeline: "3 weeks",
+      platform: "iOS",
+      screens: "65+ screens",
+      tagline:
+        "A smarter way for newcomers to Canada to find safe, reliable accommodation — with in-person property checks through a mediator to keep the rental process scam-free.",
+      hero: "/work/cs-rz/01-cover.jpg",
+      sections: [
+        {
+          type: "stats",
+          title: "Project overview",
+          body:
+            "Renteeez helps newcomers to Canada find safe, reliable accommodation while avoiding rental scams. It offers in-person property checks through a mediator and supports real needs like language translation and alternative verification methods. This case study focuses on the UX process and the key design decisions that led to the final solution.",
+          stats: [
+            { v: "5", l: "Team members" },
+            { v: "3", l: "Weeks" },
+            { v: "65+", l: "Screens" },
+          ],
+        },
+        {
+          type: "chips",
+          title: "Tools",
+          body:
+            "We relied on a range of tools through the project — Figma for collaborative design, Photoshop for image editing, and PowerPoint to present the work.",
+          chips: ["Figma", "Photoshop", "PowerPoint"],
+        },
+        {
+          type: "steps",
+          title: "Our process",
+          body:
+            "We followed a design-thinking process with a user-centred approach — a non-linear, iterative loop across five phases.",
+          steps: ["Empathize", "Define", "Ideate", "Prototype", "Test"],
+        },
+        {
+          type: "text",
+          title: "Research & insights",
+          body:
+            "We combined quantitative and qualitative research to reach our findings. Surveys captured demographics and habits, and each of us ran a personalised interview — gathering insights from five interviews in total.",
+          note: "2 methods · Surveys + 5 interviews",
+        },
+        {
+          type: "image",
+          title: "Empathy map",
+          body:
+            "Mapping what newcomers say, think, do and feel surfaced the core anxiety: the fear of being scammed, paired with cultural shock and the need for someone to physically check a property.",
+          src: "/work/cs-rz/empathy.jpg",
+          alt: "Renteeez empathy map",
+        },
+        {
+          type: "image",
+          title: "Persona",
+          body:
+            "Ryan, 25 — a computer operator who researches everything before spending. His pains: sharing space, language barriers, judging listing reliability, time-zone delays, no local credit history, and a constant worry about scams.",
+          src: "/work/cs-rz/persona.jpg",
+          alt: "Renteeez persona — Ryan, the tenant",
+        },
+        {
+          type: "quote",
+          title: "Problem statement",
+          body:
+            "A newcomer planning to move to Canada needs a reliable way to secure accommodation ahead of time, before they arrive — because the current process leaves them vulnerable to scams and other fraudulent activity.",
+        },
+        {
+          type: "text",
+          title: "Hypothesis",
+          body:
+            "We believe that introducing a mediator to newcomers will help them secure trustworthy accommodation. We’ll know this is true when we see 8 in 10 newcomers get accommodation through a mediator.",
+          note: "Target · 8 / 10 newcomers",
+        },
+        {
+          type: "text",
+          title: "Potential solution",
+          body:
+            "An accommodation search app tailored for newcomers that lets them add a third person for an in-person property check — helping them secure scam-free accommodation in Canada.",
+        },
+        {
+          type: "image",
+          title: "Assumption mapping",
+          body:
+            "We plotted our assumptions by risk and certainty — from “a third-person check builds trust” to language barriers in an English-only app — to decide what to test first.",
+          src: "/work/cs-rz/assumption.jpg",
+          alt: "Renteeez assumption mapping",
+        },
+        {
+          type: "image",
+          title: "Content inventory & card sorting",
+          body:
+            "A group card-sorting activity gave us diverse perspectives and helped prioritise features across our three main audiences: Tenants, Mediators, and Owners.",
+          src: "/work/cs-rz/cardsort.jpg",
+          alt: "Renteeez card sorting",
+        },
+        {
+          type: "image",
+          title: "Information architecture",
+          body:
+            "We structured the IA so that search, shortlist, mediator, categories and accommodation management are all reachable and logically organised from the home screen.",
+          src: "/work/cs-rz/ia.jpg",
+          alt: "Renteeez information architecture",
+        },
+        {
+          type: "gallery",
+          title: "UX storyboard",
+          body:
+            "A storyboard followed John from stressed and scam-wary to relaxed and prepared — discovering the app, connecting with a mediator over video, verifying the property, and paying securely.",
+          images: [],
+          frames: [
+            { t: "Stress & tension", d: "John sits in a dimly lit room surrounded by packed suitcases, holding his phone — stressed and frustrated.", img: "/work/cs-rz/frames/f1.jpg" },
+            { t: "Desperate search", d: "He scrolls through listing after listing, none of which seem trustworthy, and rubs his forehead.", img: "/work/cs-rz/frames/f2.jpg" },
+            { t: "Discovering the app", d: "He stumbles on a trustworthy app in the store; his expression shifts from stressed to curious.", img: "/work/cs-rz/frames/f3.jpg" },
+            { t: "Understanding the features", d: "The app shows live video-call verification, a mediator introduction, and detailed accommodation info.", img: "/work/cs-rz/frames/f4.jpg" },
+            { t: "Contacting the mediator", d: "John taps “Contact Mediator” and starts a chat. Sarah introduces herself and asks about his needs.", img: "/work/cs-rz/frames/f5.jpg" },
+            { t: "Mediator in action", d: "Sarah verifies the property over a live video call, sharing photos, videos, and the exact location.", img: "/work/cs-rz/frames/f6.jpg" },
+            { t: "Approval & payment", d: "John reviews the verified info, feels satisfied, approves the place, and pays securely in the app.", img: "/work/cs-rz/frames/f7.jpg" },
+            { t: "Stress-free & prepared", d: "Relaxed and smiling, John packs with confidence, checking off a list for his new home.", img: "/work/cs-rz/frames/f8.jpg" },
+          ],
+        },
+        {
+          type: "image",
+          title: "Low-fidelity wireframes",
+          body:
+            "We explored layout and flow with low-fidelity wireframes before committing to any visual design.",
+          src: "/work/cs-rz/wireframes.jpg",
+          alt: "Renteeez wireframes",
+        },
+        {
+          type: "image",
+          title: "Logo & colours",
+          body:
+            "A confident purple identity built from the brand’s “r”, a roofline for a safe home, and a clap marking the moment a customer finds the right place.",
+          src: "/work/cs-rz/logo.jpg",
+          alt: "Renteeez logo and colours",
+        },
+        {
+          type: "image",
+          title: "Components",
+          body:
+            "A reusable component library — navigation states, buttons, listing cards, toggles and tabs — kept the interface consistent across 65+ screens.",
+          src: "/work/cs-rz/components.jpg",
+          alt: "Renteeez Figma components",
+        },
+        {
+          type: "gallery",
+          title: "High-fidelity design",
+          body:
+            "The final UI is clean and trust-first — clear listings, a mediator chat and video flow, shortlists, earnings for mediators, and accommodation management for tenants.",
+          images: [
+            "/work/cs-rz/hifi-c.jpg",
+            "/work/cs-rz/hifi-a.jpg",
+            "/work/cs-rz/hifi-b.jpg",
+          ],
+        },
+      ],
+    },
   },
   {
     id: "03",

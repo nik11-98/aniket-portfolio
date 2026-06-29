@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { mementos } from "../data/site";
 import styles from "./FanDeck.module.css";
 
@@ -22,7 +23,13 @@ export default function FanDeck() {
 
       <div className={styles.deck} style={{ "--mid": mid }}>
         {mementos.map((item, i) => (
-          <div key={i} className={styles.card} style={{ "--i": i }}>
+          <Link
+            key={i}
+            href="/mementos"
+            className={styles.card}
+            style={{ "--i": i }}
+            aria-label="View all mementos"
+          >
             {item.type === "video" ? (
               <video
                 className={styles.media}
@@ -43,7 +50,7 @@ export default function FanDeck() {
                 draggable="false"
               />
             )}
-          </div>
+          </Link>
         ))}
       </div>
     </section>

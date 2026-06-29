@@ -96,6 +96,24 @@ export default function CaseStudy({ project, next }) {
                 ))}
               </div>
             )}
+
+            {s.frames && (
+              <ol className={styles.frames}>
+                {s.frames.map((f, j) => (
+                  <li key={j}>
+                    {f.img && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img className={styles.frameImg} src={f.img} alt={f.t} loading="lazy" />
+                    )}
+                    <div className={styles.frameBody}>
+                      <span className={styles.frameNum}>{j + 1}</span>
+                      <h3 className={styles.frameTitle}>{f.t}</h3>
+                      <p className={styles.frameDesc}>{f.d}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            )}
           </section>
         ))}
 

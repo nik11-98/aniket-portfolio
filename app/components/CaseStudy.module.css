@@ -111,7 +111,9 @@
   letter-spacing: -0.01em;
   color: var(--ink);
   padding-left: var(--s-3);
-  border-left: 3px solid var(--cs-accent);
+  /* logo-gradient line */
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(180deg, #6fb1f1 0%, #f4a44d 100%) 1;
 }
 
 /* stats */
@@ -164,9 +166,9 @@
   font-size: var(--t-sm);
   padding: 0.55rem 1rem 0.55rem 0.55rem;
   border-radius: 100px;
-  color: #82c8ff;
-  background: rgba(130, 200, 255, 0.12);
-  border: 1px solid rgba(130, 200, 255, 0.38);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 }
 .stepNum {
   display: grid;
@@ -174,8 +176,8 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #82c8ff;
-  color: #18181b;
+  background: #000;
+  color: #fff;
   font-family: var(--font-mono);
   font-size: var(--t-xs);
   font-weight: 600;
@@ -201,6 +203,61 @@
   display: block;
   border-radius: 18px;
   border: 1px solid var(--line);
+}
+
+/* storyboard frame captions */
+.frames {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-2);
+  margin-top: var(--s-4);
+}
+.frames li {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+.frameImg {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--line);
+}
+.frameBody {
+  padding: var(--s-3);
+}
+.frameNum {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--cs-accent);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.frameTitle {
+  font-size: var(--t-h3);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.frameDesc {
+  margin-top: 0.35rem;
+  font-size: var(--t-sm);
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+@media (min-width: 760px) {
+  .frames { grid-template-columns: repeat(2, 1fr); gap: var(--s-3) var(--s-4); }
 }
 
 .proto { display: flex; justify-content: center; margin-top: var(--s-6); }
