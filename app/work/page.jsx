@@ -10,6 +10,8 @@ export const metadata = {
   description: "Selected product design work and case studies.",
 };
 
+const behance = site.socials.find((s) => s.label === "Behance");
+
 export default function WorkPage() {
   return (
     <>
@@ -26,6 +28,19 @@ export default function WorkPage() {
 
         <div className="shell shell--wide">
           <WorkGrid items={projects} />
+
+          {behance && (
+            <div className={`${styles.more} reveal`}>
+              <a
+                href={behance.href}
+                className="btn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View all projects on Behance ↗
+              </a>
+            </div>
+          )}
         </div>
       </main>
       <Footer />
