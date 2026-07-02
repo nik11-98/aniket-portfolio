@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { projects, projectsRange, site } from "../data/site";
 import WorkGrid from "./WorkGrid";
 import styles from "./Work.module.css";
@@ -16,21 +15,18 @@ export default function Work() {
 
         <WorkGrid items={projects} />
 
-        <div className={`${styles.more} reveal`}>
-          <Link href="/work" className="btn">
-            View all work →
-          </Link>
-          {behance && (
+        {behance && (
+          <div className={`${styles.more} reveal`}>
             <a
               href={behance.href}
               className="btn"
               target="_blank"
               rel="noreferrer"
             >
-              Behance ↗
+              View all projects on Behance ↗
             </a>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
