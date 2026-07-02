@@ -50,7 +50,10 @@
   .label { font-size: 0.72rem; letter-spacing: 0.06em; }
 }
 
+/* Reduce Motion: no auto-scroll, but keep a single swipeable row instead of
+   wrapping every (duplicated) pill into a tall vertical pile. */
 @media (prefers-reduced-motion: reduce) {
-  .track { animation: none; flex-wrap: wrap; justify-content: center; width: auto; }
-  .wrap { -webkit-mask-image: none; mask-image: none; }
+  .track { animation: none; }
+  .wrap { overflow-x: auto; scrollbar-width: none; }
+  .wrap::-webkit-scrollbar { display: none; }
 }
