@@ -8,7 +8,7 @@ import styles from "./Nav.module.css";
 
 // Internal links are absolute so they resolve from any route (e.g. /about).
 const links = [
-  { label: "Work", href: "/#work" },
+  { label: "Work", href: "/work" },
   { label: "Mementos", href: "/mementos" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
@@ -33,7 +33,7 @@ export default function Nav() {
           ))}
         </div>
 
-        <a href={site.resume} className={`btn btn--primary ${styles.resume}`} download>
+        <a href={site.resume} className={`btn btn--primary btn--shimmer ${styles.resume}`} download>
           Download Resume
         </a>
 
@@ -66,7 +66,7 @@ export default function Nav() {
         ))}
         <a
           href={site.resume}
-          className={`btn btn--primary ${styles.menuResume}`}
+          className={`btn btn--primary btn--shimmer ${styles.menuResume}`}
           download
           onClick={close}
         >

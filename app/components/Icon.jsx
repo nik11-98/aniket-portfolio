@@ -63,6 +63,44 @@ const ICONS = {
     </>
   ),
   pen: <path d="M16 3 21 8 8 21l-5 1 1-5L16 3Z" />,
+  layout: (
+    <>
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <path d="M3 9h18M9 9v11" />
+    </>
+  ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m16.5 16.5 4.5 4.5" />
+    </>
+  ),
+  layers: (
+    <>
+      <path d="m12 3 9 5-9 5-9-5 9-5Z" />
+      <path d="m3 13 9 5 9-5" />
+    </>
+  ),
+  cursor: <path d="m5 3 6 16 2.5-6.5L20 10 5 3Z" />,
+  eye: (
+    <>
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+      <circle cx="12" cy="12" r="3" />
+    </>
+  ),
+  devices: (
+    <>
+      <rect x="2" y="4" width="13" height="10" rx="1.5" />
+      <path d="M6 18h5" />
+      <rect x="16.5" y="9" width="5.5" height="11" rx="1.5" />
+    </>
+  ),
+  target: (
+    <>
+      <circle cx="12" cy="12" r="8" />
+      <circle cx="12" cy="12" r="3.5" />
+    </>
+  ),
   arrowUpRight: (
     <>
       <path d="M7 17 17 7" />

@@ -4,12 +4,12 @@
 // -----------------------------------------------------------------------------
 
 export const site = {
-  name: "Aniket Rao",
-  handle: "@aniketrao",
-  initials: "AR",
-  role: "Senior Product Designer",
-  location: "Mumbai, India",
-  email: "hello@aniketrao.studio",
+  name: "Aniket Jadhav",
+  handle: "@aniketjadhav",
+  initials: "AJ",
+  role: "Product & UX Designer",
+  location: "Toronto, Canada",
+  email: "aniket.jadhav.75054@gmail.com",
   openToWork: true,
 
   // short hero line
@@ -32,18 +32,18 @@ export const site = {
 
   // longer about paragraph(s)
   about: [
-    "Senior Product Designer with 8+ years of experience designing and scaling multi-sided platforms across both consumer and B2B products. My work has reached over 5.7 million users.",
-    "Lately I’ve been focused on AI-driven tools and building scalable design systems that keep teams fast without losing craft.",
+    "Product & UX designer with 4+ years of experience designing scalable, responsive digital experiences across SaaS, enterprise, and content-driven platforms. I work end-to-end — user research, interaction design, wireframing, prototyping, and high-fidelity UI.",
+    "I build and evolve design systems, collaborate within agile cross-functional teams, and turn complex business requirements into intuitive, user-centered experiences — with a strong focus on accessibility (WCAG & AODA) and mobile-first responsive design.",
+    "Based in Toronto and open to relocating, with a Graduate Certificate in User Experience Design from Humber College. I’m also comfortable creating marketing materials — pitch decks, brochures, and branded visual content.",
   ],
 
   socials: [
-    { label: "Email", href: "mailto:hello@aniketrao.studio" },
-    { label: "LinkedIn", href: "https://linkedin.com" },
-    { label: "Twitter / X", href: "https://x.com" },
-    { label: "Read.cv", href: "https://read.cv" },
+    { label: "Email", href: "mailto:aniket.jadhav.75054@gmail.com" },
+    { label: "Behance", href: "https://www.behance.net/aniketjadhav6" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/aniket-jadhav-9b9a05191/" },
   ],
 
-  resume: "#",
+  resume: "/Aniket-Jadhav-Resume.pdf",
 };
 
 // "Mementos" photos for the fan deck (from /mementos, stored in /public/mementos).
@@ -62,42 +62,64 @@ export const gallery = [
   _vid(3), _img(9), _img(10), _img(11),
 ];
 
-// Colourful "skill" pills — colours sampled from the reference screenshot.
+// Colourful "skill" pills — real skills mixed with a few playful ones.
+// Every pill has a unique icon; colours sampled from the reference.
 export const skills = [
-  { label: "Moving Rectangles", color: "#a3d0f2", icon: "move" },
+  { label: "UX & UI Design", color: "#a3d0f2", icon: "layout" },
+  { label: "User Research", color: "#f6c63e", icon: "search" },
+  { label: "Design Systems", color: "#f3c7df", icon: "layers" },
+  { label: "Prototyping", color: "#cdee7d", icon: "shuffle" },
+  { label: "Wireframing", color: "#5fd398", icon: "frame" },
+  { label: "Interaction Design", color: "#ffffff", icon: "cursor" },
+  { label: "Accessibility · WCAG", color: "#ef8a5a", icon: "eye" },
+  { label: "Responsive Design", color: "#c7b4ef", icon: "devices" },
+  { label: "Thinking Systems", color: "#a3d0f2", icon: "globe" },
   { label: "Improving UX", color: "#f6c63e", icon: "smile" },
-  { label: "Thinking Systems", color: "#f3c7df", icon: "globe" },
-  { label: "Rounding Corners", color: "#cdee7d", icon: "corners" },
-  { label: "Reframing Problems", color: "#5fd398", icon: "frame" },
-  { label: "Prototyping", color: "#ffffff", icon: "shuffle" },
   { label: "Making It Pop", color: "#ef8a5a", icon: "brush" },
-  { label: "Testing", color: "#c7b4ef", icon: "pen" },
+  { label: "Reframing Problems", color: "#cdee7d", icon: "target" },
 ];
 
 export const stats = [
-  { value: "8+", label: "Years experience" },
-  { value: "5.7M", label: "Users reached" },
-  { value: "60+", label: "Projects shipped" },
+  { value: "4+", label: "Years of experience" },
+  { value: "5", label: "Companies & studios" },
+  { value: "2", label: "UX grad certificates" },
 ];
 
 export const experience = [
   {
-    company: "Pathao",
-    role: "Senior Product Designer",
-    period: "2022 — Present",
-    summary: "Leading design for the rider & merchant platforms across 4 markets.",
+    company: "Futura Sound",
+    role: "UI/UX Designer (Co-op · Humber College)",
+    period: "Sep 2025 — Feb 2026",
+    summary:
+      "Led UI improvements and experience optimization for a live production website, maintaining CMS-driven (WordPress) content with accessible, responsive layouts and smooth developer handoff.",
   },
   {
-    company: "Klikit",
-    role: "Product Designer",
-    period: "2020 — 2022",
-    summary: "Built the order-management suite and the first shared design system.",
+    company: "Holeshot1 Media",
+    role: "UI/UX Designer (Co-op · Conestoga College)",
+    period: "Aug 2024 — Sep 2024",
+    summary:
+      "Delivered UX/UI for the OHANA product — established brand guidelines and a brand book, and built responsive landing pages from wireframes to high-fidelity designs in Wix.",
   },
   {
-    company: "Freelance",
-    role: "Designer & Art Director",
-    period: "2017 — 2020",
-    summary: "Identity and product work for early-stage founders and studios.",
+    company: "Platerate",
+    role: "Product / UI/UX Designer",
+    period: "Dec 2020 — Dec 2023",
+    summary:
+      "Owned end-to-end UI/UX across responsive web — research, information architecture, prototyping, and design systems — within agile cross-functional teams, with WCAG/AODA-compliant delivery.",
+  },
+  {
+    company: "Della Leaders Club",
+    role: "Graphic / UI/UX Designer",
+    period: "May 2021 — Dec 2021",
+    summary:
+      "Designed low- to high-fidelity wireframes and UI for new features, iterated with user feedback and analytics, and mentored junior designers on process and standards.",
+  },
+  {
+    company: "Anixel Studio",
+    role: "Graphic / UI Design Intern",
+    period: "Nov 2020 — Feb 2021",
+    summary:
+      "Designed web and mobile UI in Figma, created marketing and social assets aligned with brand systems, and supported clean design-to-development handoff.",
   },
 ];
 
@@ -363,22 +385,5 @@ export const projects = [
         },
       ],
     },
-  },
-  {
-    id: "03",
-    title: "Game of Thrones",
-    description:
-      "A cinematic streaming concept for the world of Westeros.",
-    image: "/work/w3.png",
-    href: "#contact",
-  },
-  {
-    id: "04",
-    title: "Borrel",
-    description:
-      "Brand and site for a Dutch–Indonesian comfort-food kitchen.",
-    image: "/work/w2.png",
-    href: "#contact",
-    locked: true,
   },
 ];

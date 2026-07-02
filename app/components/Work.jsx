@@ -1,6 +1,9 @@
-import { projects, projectsRange } from "../data/site";
-import Icon from "./Icon";
+import Link from "next/link";
+import { projects, projectsRange, site } from "../data/site";
+import WorkGrid from "./WorkGrid";
 import styles from "./Work.module.css";
+
+const behance = site.socials.find((s) => s.label === "Behance");
 
 export default function Work() {
   return (
@@ -11,29 +14,22 @@ export default function Work() {
           <span className={styles.range}>Projects ({projectsRange})</span>
         </div>
 
-        <div className={styles.grid}>
-          {projects.map((p) => (
-            <a key={p.id} href={p.href} className={`${styles.card} reveal`}>
-              <div className={styles.panel}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  className={styles.shot}
-                  src={p.image}
-                  alt={p.title}
-                  loading="lazy"
-                  draggable="false"
-                />
-                <span className={styles.corner} aria-hidden="true">
-                  <Icon name={p.locked ? "lock" : "arrowUpRight"} size={18} />
-                </span>
-              </div>
+        <WorkGrid items={projects} />
 
-              <div className={styles.meta}>
-                <h3 className={styles.title}>{p.title}</h3>
-                <p className={styles.desc}>{p.description}</p>
-              </div>
+        <div className={`${styles.more} reveal`}>
+          <Link href="/work" className="btn">
+            View all work →
+          </Link>
+          {behance && (
+            <a
+              href={behance.href}
+              className="btn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Behance ↗
             </a>
-          ))}
+          )}
         </div>
       </div>
     </section>

@@ -1,0 +1,17 @@
+.head {
+  display: grid;
+  gap: var(--s-2);
+  padding-block: var(--s-4) var(--s-6);
+}
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--t-h1);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.sub {
+  font-size: var(--t-lead);
+  color: var(--ink-2);
+  max-width: 46ch;
+}
