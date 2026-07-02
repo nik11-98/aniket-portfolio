@@ -394,4 +394,22 @@ export const projects = [
       ],
     },
   },
+  {
+    id: "03",
+    title: "Dairy Queen Rebranding",
+    description:
+      "A playful rebrand and packaging system for the Dairy Queen franchise.",
+    image: "/work/dq.png",
+    href: "https://www.behance.net/gallery/248027161/Dairy-Queen-Rebranding-Packaging",
+    external: true,
+  },
+  {
+    id: "04",
+    title: "eBay Usability Study",
+    description:
+      "A usability-testing case study and UX redesign of eBay’s selling flow.",
+    image: "/work/ebay.png",
+    href: "https://www.behance.net/gallery/196950399/Ebay-Case-Study-Usability-testing",
+    external: true,
+  },
 ];

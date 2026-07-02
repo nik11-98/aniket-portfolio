@@ -40,7 +40,13 @@ export default function WorkGrid({ items }) {
             {inner}
           </div>
         ) : (
-          <a key={p.id} href={p.href} className={`${styles.card} reveal`} style={delay}>
+          <a
+            key={p.id}
+            href={p.href}
+            className={`${styles.card} reveal`}
+            style={delay}
+            {...(p.external ? { target: "_blank", rel: "noreferrer" } : {})}
+          >
             {inner}
           </a>
         );
