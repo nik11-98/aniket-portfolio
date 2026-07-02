@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 // Mounted once. Observes every .reveal element on the page and toggles
-// .is-in as it enters the viewport — keeps the entrance motion consistent
+// .is-in as it enters the viewport - keeps the entrance motion consistent
 // site-wide without each component wiring its own observer.
 export default function Reveal() {
   useEffect(() => {

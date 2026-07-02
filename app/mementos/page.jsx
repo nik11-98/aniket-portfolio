@@ -6,8 +6,8 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: `Mementos — ${site.name}`,
-  description: "Moments off the clock — photos and clips.",
+  title: `Mementos · ${site.name}`,
+  description: "Moments off the clock · photos and clips.",
 };
 
 export default function MementosPage() {

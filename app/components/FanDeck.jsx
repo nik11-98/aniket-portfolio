@@ -14,7 +14,7 @@ export default function FanDeck() {
         <div className={`${styles.head} reveal`}>
           <span className="eyebrow">Mementos</span>
           <h2 className="h2">A few moments off the clock</h2>
-          <p className={styles.hint}>Hover to fan out — or see them all.</p>
+          <p className={styles.hint}>Hover to fan out, or see them all.</p>
           <a href="/mementos" className={`btn ${styles.viewAll}`}>
             View all mementos →
           </a>

@@ -1,6 +1,6 @@
 .wrap { padding-bottom: var(--s-6); }
 
-/* CSS columns masonry — auto-responsive via column-width */
+/* CSS columns masonry - auto-responsive via column-width */
 .grid {
   columns: 300px;
   column-gap: var(--s-3);

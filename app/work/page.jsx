@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: `Work — ${site.name}`,
+  title: `Work · ${site.name}`,
   description: "Selected product design work and case studies.",
 };
 
@@ -20,7 +20,7 @@ export default function WorkPage() {
           <span className="eyebrow">Work</span>
           <h1 className={styles.title}>Everything I’ve made</h1>
           <p className={styles.sub}>
-            Product design, brand and web — {projects.length} projects, {projectsRange}.
+            Product design, brand and web · {projects.length} projects, {projectsRange}.
           </p>
         </header>
 

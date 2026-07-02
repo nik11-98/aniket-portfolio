@@ -1,5 +1,5 @@
 /* =========================================================================
-   DESIGN SYSTEM — single source of truth.
+   DESIGN SYSTEM - single source of truth.
    Clean, light, minimal profile aesthetic (Wall of Portfolios style).
    Every component pulls colour, type, spacing, motion and layout from
    these tokens. Nothing below should hardcode a raw value.
@@ -26,7 +26,7 @@
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-mono:    var(--font-mono), ui-monospace, monospace;
 
-  /* fluid type scale — restrained for a clean profile */
+  /* fluid type scale - restrained for a clean profile */
   --t-display: clamp(2.4rem, 1.4rem + 4.4vw, 4.6rem);
   --t-h1:    clamp(2rem, 1.4rem + 2.6vw, 3.1rem);
   --t-h2:    clamp(1.5rem, 1.2rem + 1.3vw, 2rem);
@@ -102,10 +102,10 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 }
 
 /* =========================================================================
-   PRIMITIVES — reused everywhere
+   PRIMITIVES - reused everywhere
    ========================================================================= */
 
-/* narrow centred column — the spine of the clean layout */
+/* narrow centred column - the spine of the clean layout */
 .shell {
   width: 100%;
   max-width: var(--max);
@@ -150,7 +150,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   padding: 0.4em 0.85em;
 }
 
-/* buttons — all CTAs share this base for a consistent look */
+/* buttons - all CTAs share this base for a consistent look */
 .btn {
   position: relative;
   display: inline-flex;
@@ -204,7 +204,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   transition: opacity var(--dur) var(--ease);
 }
 
-/* hover only lifts + reveals the glow/border — the fill never changes */
+/* hover only lifts + reveals the glow/border - the fill never changes */
 .btn:hover { top: -1px; }
 .btn:hover::before,
 .btn:hover::after { opacity: 0.9; animation: btnGlow 2.4s linear infinite; }
@@ -217,7 +217,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   to { background-position: 300% 0; }
 }
 
-/* Download Resume only — a subtle shimmer travels along the gray border,
+/* Download Resume only - a subtle shimmer travels along the gray border,
    sweeping diagonally from the bottom-left corner to the right-center, then
    pauses. A masked ring lets the base gray border show through the
    transparent parts. */
@@ -289,10 +289,16 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   border-radius: var(--radius);
 }
 
-/* scroll-reveal: components add .reveal, JS toggles .is-in */
+/* scroll-reveal: components add .reveal, JS toggles .is-in.
+   Grouped items can set --reveal-delay to cascade in. */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(22px);
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  transition-delay: var(--reveal-delay, 0s);
 }
 .reveal.is-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; transform: none; opacity: 1; }
+}

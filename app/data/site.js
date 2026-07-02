@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// Single content source. Swap copy / projects here — every component reads
+// Single content source. Swap copy / projects here, every component reads
 // from this object so the site never drifts out of sync.
 // -----------------------------------------------------------------------------
 
@@ -21,20 +21,23 @@ export const site = {
   hero: {
     greeting: "Hello",
     firstName: "Aniket",
-    headline: { before: "I design products that", em: "feel", after: "simple, even when they’re not." },
+    headline: { before: "Designing experiences people", em: "love", after: "to use." },
     subtext: [
-      { t: "Currently designing " },
-      { t: "complex B2B workflows", bold: true },
-      { t: " and a multi-brand " },
-      { t: "design system", bold: true },
+      { t: "Hello, I’m " },
+      { t: "Aniket Jadhav", bold: true },
+      { t: ", a " },
+      { t: "UI/UX designer with 4+ years", bold: true },
+      { t: " of experience. I design digital experiences that feel " },
+      { t: "simple, purposeful, and human", bold: true },
+      { t: ", driven by research, empathy, and a deep understanding of real user needs." },
     ],
   },
 
   // longer about paragraph(s)
   about: [
-    "Product & UX designer with 4+ years of experience designing scalable, responsive digital experiences across SaaS, enterprise, and content-driven platforms. I work end-to-end — user research, interaction design, wireframing, prototyping, and high-fidelity UI.",
-    "I build and evolve design systems, collaborate within agile cross-functional teams, and turn complex business requirements into intuitive, user-centered experiences — with a strong focus on accessibility (WCAG & AODA) and mobile-first responsive design.",
-    "Based in Toronto and open to relocating, with a Graduate Certificate in User Experience Design from Humber College. I’m also comfortable creating marketing materials — pitch decks, brochures, and branded visual content.",
+    "Product & UX designer with 4+ years of experience designing scalable, responsive digital experiences across SaaS, enterprise, and content-driven platforms. I work end-to-end, user research, interaction design, wireframing, prototyping, and high-fidelity UI.",
+    "I build and evolve design systems, collaborate within agile cross-functional teams, and turn complex business requirements into intuitive, user-centered experiences, with a strong focus on accessibility (WCAG & AODA) and mobile-first responsive design.",
+    "Based in Toronto and open to relocating, with a Graduate Certificate in User Experience Design from Humber College. I’m also comfortable creating marketing materials, pitch decks, brochures, and branded visual content.",
   ],
 
   socials: [
@@ -52,7 +55,7 @@ export const mementos = Array.from({ length: 11 }, (_, i) => ({
   src: `/mementos/m${i + 1}.jpg`,
 }));
 
-// Full gallery for the /mementos page — every photo plus the video clips,
+// Full gallery for the /mementos page, every photo plus the video clips,
 // interleaved so the videos are spread through the masonry.
 const _img = (n) => ({ type: "image", src: `/mementos/m${n}.jpg` });
 const _vid = (n) => ({ type: "video", src: `/mementos/v${n}.mp4` });
@@ -62,7 +65,7 @@ export const gallery = [
   _vid(3), _img(9), _img(10), _img(11),
 ];
 
-// Colourful "skill" pills — real skills mixed with a few playful ones.
+// Colourful "skill" pills, real skills mixed with a few playful ones.
 // Every pill has a unique icon; colours sampled from the reference.
 export const skills = [
   { label: "UX & UI Design", color: "#a3d0f2", icon: "layout" },
@@ -88,42 +91,47 @@ export const stats = [
 export const experience = [
   {
     company: "Futura Sound",
+    logo: "/logos/futura.png",
     role: "UI/UX Designer (Co-op · Humber College)",
-    period: "Sep 2025 — Feb 2026",
+    period: "Sep 2025 – Feb 2026",
     summary:
       "Led UI improvements and experience optimization for a live production website, maintaining CMS-driven (WordPress) content with accessible, responsive layouts and smooth developer handoff.",
   },
   {
     company: "Holeshot1 Media",
+    logo: "/logos/holeshot.svg",
     role: "UI/UX Designer (Co-op · Conestoga College)",
-    period: "Aug 2024 — Sep 2024",
+    period: "Aug 2024 – Sep 2024",
     summary:
-      "Delivered UX/UI for the OHANA product — established brand guidelines and a brand book, and built responsive landing pages from wireframes to high-fidelity designs in Wix.",
+      "Delivered UX/UI for the OHANA product, established brand guidelines and a brand book, and built responsive landing pages from wireframes to high-fidelity designs in Wix.",
   },
   {
     company: "Platerate",
+    logo: "/logos/platerate.png",
     role: "Product / UI/UX Designer",
-    period: "Dec 2020 — Dec 2023",
+    period: "Dec 2020 – Dec 2023",
     summary:
-      "Owned end-to-end UI/UX across responsive web — research, information architecture, prototyping, and design systems — within agile cross-functional teams, with WCAG/AODA-compliant delivery.",
+      "Owned end-to-end UI/UX across responsive web, research, information architecture, prototyping, and design systems, within agile cross-functional teams, with WCAG/AODA-compliant delivery.",
   },
   {
     company: "Della Leaders Club",
+    logo: "/logos/della.svg",
     role: "Graphic / UI/UX Designer",
-    period: "May 2021 — Dec 2021",
+    period: "May 2021 – Dec 2021",
     summary:
       "Designed low- to high-fidelity wireframes and UI for new features, iterated with user feedback and analytics, and mentored junior designers on process and standards.",
   },
   {
     company: "Anixel Studio",
+    logo: "/logos/anixel.png",
     role: "Graphic / UI Design Intern",
-    period: "Nov 2020 — Feb 2021",
+    period: "Nov 2020 – Feb 2021",
     summary:
       "Designed web and mobile UI in Figma, created marketing and social assets aligned with brand systems, and supported clean design-to-development handoff.",
   },
 ];
 
-// Selected work — image cards (mockup, title, one-line description).
+// Selected work, image cards (mockup, title, one-line description).
 export const projectsRange = "2023–26";
 
 export const projects = [
@@ -142,14 +150,14 @@ export const projects = [
       platform: "iOS",
       screens: "44+ screens",
       tagline:
-        "A one-stop meal-planning app that makes eating healthy, delicious food easy for busy lives — built end to end through a design-thinking process.",
+        "A one-stop meal-planning app that makes eating healthy, delicious food easy for busy lives, built end to end through a design-thinking process.",
       hero: "/work/cs/01-cover.jpg",
       sections: [
         {
           type: "stats",
           title: "Project overview",
           body:
-            "Smart Eats is a one-stop meal-planning solution that makes it easy for people to eat healthy, delicious food while fitting it into their busy lives. We focused on a wide range of nutritious recipes that can be tailored to different dietary needs and tastes — so users not only get tasty meals, but feel good about their choices for their health and the environment.",
+            "Smart Eats is a one-stop meal-planning solution that makes it easy for people to eat healthy, delicious food while fitting it into their busy lives. We focused on a wide range of nutritious recipes that can be tailored to different dietary needs and tastes, so users not only get tasty meals, but feel good about their choices for their health and the environment.",
           stats: [
             { v: "5", l: "Team members" },
             { v: "6", l: "Weeks" },
@@ -160,34 +168,34 @@ export const projects = [
           type: "chips",
           title: "Tools",
           body:
-            "Throughout the project we relied on a range of tools to enhance our creative capabilities — Figma for collaborative design, Photoshop for image editing, and PowerPoint to present the work.",
+            "Throughout the project we relied on a range of tools to enhance our creative capabilities, Figma for collaborative design, Photoshop for image editing, and PowerPoint to present the work.",
           chips: ["Figma", "Photoshop", "PowerPoint"],
         },
         {
           type: "steps",
           title: "Design process",
           body:
-            "We followed a design-thinking process with a user-centred approach — a non-linear, iterative loop across five phases.",
+            "We followed a design-thinking process with a user-centred approach, a non-linear, iterative loop across five phases.",
           steps: ["Empathize", "Define", "Ideate", "Prototype", "Test"],
         },
         {
           type: "text",
           title: "Research & insights",
           body:
-            "We combined quantitative and qualitative research to reach our findings. Surveys captured demographics and eating habits, and each of us ran a personalised interview — gathering insights from five interviews in total.",
+            "We combined quantitative and qualitative research to reach our findings. Surveys captured demographics and eating habits, and each of us ran a personalised interview, gathering insights from five interviews in total.",
           note: "2 methods · Surveys + 5 interviews",
         },
         {
           type: "quote",
           title: "Problem statement",
           body:
-            "A parent who manages their children’s routine needs an efficient, convenient way to balance a busy schedule with nutrition-rich meal preparation — because cooking efficiently with limited ingredients, while still prioritising nutrition for their kids, is hard to do on a tight schedule.",
+            "A parent who manages their children’s routine needs an efficient, convenient way to balance a busy schedule with nutrition-rich meal preparation, because cooking efficiently with limited ingredients, while still prioritising nutrition for their kids, is hard to do on a tight schedule.",
         },
         {
           type: "image",
           title: "User flow",
           body:
-            "After defining the problem, we mapped a detailed user flow — outlining the sequence of steps a user takes to accomplish each goal in the app.",
+            "After defining the problem, we mapped a detailed user flow, outlining the sequence of steps a user takes to accomplish each goal in the app.",
           src: "/work/cs/08-userflow.jpg",
           alt: "Smart Eats user flow diagram",
           bare: true,
@@ -214,7 +222,7 @@ export const projects = [
           type: "gallery",
           title: "High-fidelity design",
           body:
-            "The final UI is warm and food-first — big, appetising imagery, a clear navigation bar, and onboarding that personalises recipes around diet, allergies and goals.",
+            "The final UI is warm and food-first, big, appetising imagery, a clear navigation bar, and onboarding that personalises recipes around diet, allergies and goals.",
           images: ["/work/cs/11-hifi-a.jpg", "/work/cs/12-hifi-b.jpg"],
         },
       ],
@@ -227,7 +235,7 @@ export const projects = [
     title: "Renteeez",
     slug: "renteez",
     description:
-      "Find and rent your ideal home remotely — a calmer rental marketplace.",
+      "Find and rent your ideal home remotely, a calmer rental marketplace.",
     image: "/work/w1.png",
     href: "/work/renteez",
     caseStudy: {
@@ -237,7 +245,7 @@ export const projects = [
       platform: "iOS",
       screens: "65+ screens",
       tagline:
-        "A smarter way for newcomers to Canada to find safe, reliable accommodation — with in-person property checks through a mediator to keep the rental process scam-free.",
+        "A smarter way for newcomers to Canada to find safe, reliable accommodation, with in-person property checks through a mediator to keep the rental process scam-free.",
       hero: "/work/cs-rz/01-cover.jpg",
       sections: [
         {
@@ -255,21 +263,21 @@ export const projects = [
           type: "chips",
           title: "Tools",
           body:
-            "We relied on a range of tools through the project — Figma for collaborative design, Photoshop for image editing, and PowerPoint to present the work.",
+            "We relied on a range of tools through the project, Figma for collaborative design, Photoshop for image editing, and PowerPoint to present the work.",
           chips: ["Figma", "Photoshop", "PowerPoint"],
         },
         {
           type: "steps",
           title: "Our process",
           body:
-            "We followed a design-thinking process with a user-centred approach — a non-linear, iterative loop across five phases.",
+            "We followed a design-thinking process with a user-centred approach, a non-linear, iterative loop across five phases.",
           steps: ["Empathize", "Define", "Ideate", "Prototype", "Test"],
         },
         {
           type: "text",
           title: "Research & insights",
           body:
-            "We combined quantitative and qualitative research to reach our findings. Surveys captured demographics and habits, and each of us ran a personalised interview — gathering insights from five interviews in total.",
+            "We combined quantitative and qualitative research to reach our findings. Surveys captured demographics and habits, and each of us ran a personalised interview, gathering insights from five interviews in total.",
           note: "2 methods · Surveys + 5 interviews",
         },
         {
@@ -284,15 +292,15 @@ export const projects = [
           type: "image",
           title: "Persona",
           body:
-            "Ryan, 25 — a computer operator who researches everything before spending. His pains: sharing space, language barriers, judging listing reliability, time-zone delays, no local credit history, and a constant worry about scams.",
+            "Ryan, 25, a computer operator who researches everything before spending. His pains: sharing space, language barriers, judging listing reliability, time-zone delays, no local credit history, and a constant worry about scams.",
           src: "/work/cs-rz/persona.jpg",
-          alt: "Renteeez persona — Ryan, the tenant",
+          alt: "Renteeez persona, Ryan, the tenant",
         },
         {
           type: "quote",
           title: "Problem statement",
           body:
-            "A newcomer planning to move to Canada needs a reliable way to secure accommodation ahead of time, before they arrive — because the current process leaves them vulnerable to scams and other fraudulent activity.",
+            "A newcomer planning to move to Canada needs a reliable way to secure accommodation ahead of time, before they arrive, because the current process leaves them vulnerable to scams and other fraudulent activity.",
         },
         {
           type: "text",
@@ -305,13 +313,13 @@ export const projects = [
           type: "text",
           title: "Potential solution",
           body:
-            "An accommodation search app tailored for newcomers that lets them add a third person for an in-person property check — helping them secure scam-free accommodation in Canada.",
+            "An accommodation search app tailored for newcomers that lets them add a third person for an in-person property check, helping them secure scam-free accommodation in Canada.",
         },
         {
           type: "image",
           title: "Assumption mapping",
           body:
-            "We plotted our assumptions by risk and certainty — from “a third-person check builds trust” to language barriers in an English-only app — to decide what to test first.",
+            "We plotted our assumptions by risk and certainty, from “a third-person check builds trust” to language barriers in an English-only app, to decide what to test first.",
           src: "/work/cs-rz/assumption.jpg",
           alt: "Renteeez assumption mapping",
         },
@@ -335,10 +343,10 @@ export const projects = [
           type: "gallery",
           title: "UX storyboard",
           body:
-            "A storyboard followed John from stressed and scam-wary to relaxed and prepared — discovering the app, connecting with a mediator over video, verifying the property, and paying securely.",
+            "A storyboard followed John from stressed and scam-wary to relaxed and prepared, discovering the app, connecting with a mediator over video, verifying the property, and paying securely.",
           images: [],
           frames: [
-            { t: "Stress & tension", d: "John sits in a dimly lit room surrounded by packed suitcases, holding his phone — stressed and frustrated.", img: "/work/cs-rz/frames/f1.jpg" },
+            { t: "Stress & tension", d: "John sits in a dimly lit room surrounded by packed suitcases, holding his phone, stressed and frustrated.", img: "/work/cs-rz/frames/f1.jpg" },
             { t: "Desperate search", d: "He scrolls through listing after listing, none of which seem trustworthy, and rubs his forehead.", img: "/work/cs-rz/frames/f2.jpg" },
             { t: "Discovering the app", d: "He stumbles on a trustworthy app in the store; his expression shifts from stressed to curious.", img: "/work/cs-rz/frames/f3.jpg" },
             { t: "Understanding the features", d: "The app shows live video-call verification, a mediator introduction, and detailed accommodation info.", img: "/work/cs-rz/frames/f4.jpg" },
@@ -368,7 +376,7 @@ export const projects = [
           type: "image",
           title: "Components",
           body:
-            "A reusable component library — navigation states, buttons, listing cards, toggles and tabs — kept the interface consistent across 65+ screens.",
+            "A reusable component library, navigation states, buttons, listing cards, toggles and tabs, kept the interface consistent across 65+ screens.",
           src: "/work/cs-rz/components.jpg",
           alt: "Renteeez Figma components",
         },
@@ -376,7 +384,7 @@ export const projects = [
           type: "gallery",
           title: "High-fidelity design",
           body:
-            "The final UI is clean and trust-first — clear listings, a mediator chat and video flow, shortlists, earnings for mediators, and accommodation management for tenants.",
+            "The final UI is clean and trust-first, clear listings, a mediator chat and video flow, shortlists, earnings for mediators, and accommodation management for tenants.",
           images: [
             "/work/cs-rz/hifi-c.jpg",
             "/work/cs-rz/hifi-a.jpg",

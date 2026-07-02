@@ -5,7 +5,8 @@ import styles from "./Work.module.css";
 export default function WorkGrid({ items }) {
   return (
     <div className={styles.grid}>
-      {items.map((p) => {
+      {items.map((p, i) => {
+        const delay = { "--reveal-delay": `${i * 0.08}s` };
         const inner = (
           <>
             <div className={styles.panel}>
@@ -32,13 +33,14 @@ export default function WorkGrid({ items }) {
           <div
             key={p.id}
             className={`${styles.card} ${styles.locked} reveal`}
+            style={delay}
             aria-disabled="true"
             title="Locked"
           >
             {inner}
           </div>
         ) : (
-          <a key={p.id} href={p.href} className={`${styles.card} reveal`}>
+          <a key={p.id} href={p.href} className={`${styles.card} reveal`} style={delay}>
             {inner}
           </a>
         );

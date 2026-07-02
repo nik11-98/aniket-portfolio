@@ -3,7 +3,7 @@ import SkillPills from "./SkillPills";
 import styles from "./StatementHero.module.css";
 
 export default function StatementHero() {
-  const { greeting, firstName, headline, subtext } = site.hero;
+  const { headline, subtext } = site.hero;
 
   return (
     <section className={styles.hero} id="top">
@@ -11,10 +11,6 @@ export default function StatementHero() {
 
       <div className={styles.inner}>
         <div className="shell">
-          <p className={styles.greeting}>
-            {greeting}, I’m <strong className={styles.name}>{firstName}</strong>
-          </p>
-
           <h1 className={styles.headline}>
             {headline.before} <em>{headline.em}</em> {headline.after}
           </h1>

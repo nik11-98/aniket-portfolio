@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Preloader.module.css";
 
-// "Hello" across languages — shown once per session on first load.
+// "Hello" across languages - shown once per session on first load.
 const GREETINGS = ["Hello", "Bonjour", "नमस्ते", "こんにちは"];
 
 export default function Preloader() {

@@ -25,11 +25,18 @@
   width: 46px;
   height: 46px;
   border-radius: var(--radius-sm);
-  background: var(--surface-2);
+  background: #fff;
   border: 1px solid var(--line);
+  overflow: hidden;
   font-weight: 600;
   font-size: 1.2rem;
-  color: var(--ink);
+  color: #18181b;
+}
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
 }
 
 .info { display: grid; gap: 0.2em; min-width: 0; }

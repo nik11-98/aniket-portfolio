@@ -29,7 +29,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: `${site.name} — ${site.role}`,
+  title: `${site.name} · ${site.role}`,
   description: site.intro,
 };
 

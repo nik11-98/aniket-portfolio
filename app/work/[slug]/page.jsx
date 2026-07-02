@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
   const project = withCase.find((p) => p.slug === slug);
   if (!project) return {};
   return {
-    title: `${project.title} — Case study · ${site.name}`,
+    title: `${project.title} · Case study · ${site.name}`,
     description: project.description,
   };
 }

@@ -10,7 +10,7 @@ export default function Footer() {
           <span className="eyebrow">Get in touch</span>
           <h2 className={styles.big}>Let’s connect.</h2>
           <p className={styles.sub}>
-            I’m always down for a chat — about a role, a project, or just design.
+            I’m always down for a chat about a role, a project, or just design.
           </p>
           <a href={`mailto:${site.email}`} className="btn btn--primary">
             {site.email}

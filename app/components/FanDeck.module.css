@@ -11,7 +11,7 @@
 }
 .viewAll { margin-top: var(--s-2); }
 
-/* the fan — cards share a pivot well below, so rotating each splays an arc */
+/* the fan - cards share a pivot well below, so rotating each splays an arc */
 .deck {
   --spread: 6.5deg;
   --card-w: 196px;

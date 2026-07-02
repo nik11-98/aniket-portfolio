@@ -6,7 +6,7 @@ import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: `About — ${site.name}`,
+  title: `About · ${site.name}`,
   description: site.intro,
 };
 

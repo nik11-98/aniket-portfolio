@@ -10,10 +10,18 @@ export default function Experience() {
         </div>
 
         <ul className={styles.list}>
-          {experience.map((job) => (
-            <li key={job.company} className={`${styles.row} card reveal`}>
+          {experience.map((job, i) => (
+            <li
+              key={job.company}
+              className={`${styles.row} card reveal`}
+              style={{ "--reveal-delay": `${i * 0.07}s` }}
+            >
               <span className={styles.logo} aria-hidden="true">
-                {job.company[0]}
+                {job.logo ? (
+                  <img src={job.logo} alt="" className={styles.logoImg} />
+                ) : (
+                  job.company[0]
+                )}
               </span>
               <div className={styles.info}>
                 <div className={styles.top}>

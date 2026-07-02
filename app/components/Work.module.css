@@ -19,7 +19,7 @@
 
 .card { display: block; }
 
-/* locked projects — visible but not clickable */
+/* locked projects - visible but not clickable */
 .locked { cursor: default; }
 .locked .shot { filter: saturate(0.85) brightness(0.92); }
 .locked:hover .shot { transform: none; }
@@ -32,7 +32,7 @@
   margin-top: var(--s-6);
 }
 
-/* image panel — the mockup sits inside a soft rounded frame */
+/* image panel - the mockup sits inside a soft rounded frame */
 .panel {
   position: relative;
   aspect-ratio: 4 / 3;

@@ -31,7 +31,7 @@ export default function CaseStudy({ project, next }) {
         {cs.hero && (
           <figure className={`${styles.hero} reveal`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={cs.hero} alt={`${project.title} — cover`} />
+            <img src={cs.hero} alt={`${project.title} cover`} />
           </figure>
         )}
 
