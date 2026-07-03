@@ -17,6 +17,7 @@ export default function WorkGrid({ items }) {
                 alt={p.title}
                 loading="lazy"
                 draggable="false"
+                style={p.imagePos ? { objectPosition: p.imagePos } : undefined}
               />
               <span className={styles.corner} aria-hidden="true">
                 <Icon name={p.locked ? "lock" : "arrowUpRight"} size={18} />

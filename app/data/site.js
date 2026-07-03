@@ -412,4 +412,33 @@ export const projects = [
     href: "https://www.behance.net/gallery/196950399/Ebay-Case-Study-Usability-testing",
     external: true,
   },
+  {
+    id: "05",
+    title: "Score Pizza",
+    description:
+      "An AR dining concept — point your phone at a dish to see its details.",
+    image: "/work/scorepizza.png",
+    href: "https://www.behance.net/gallery/221317449/AR-Plan-Score-Pizza",
+    external: true,
+  },
+  {
+    id: "06",
+    title: "HOA Fiscal",
+    description:
+      "Brand and responsive website for a home-owners association platform.",
+    image: "/work/hoa.webp",
+    imagePos: "left",
+    href: "https://www.behance.net/gallery/160687963/Responsive-website-for-Home-association",
+    external: true,
+  },
+  {
+    id: "07",
+    title: "Exchange Dirt",
+    description:
+      "Brand and responsive website for a soil-exchange marketplace.",
+    image: "/work/exchangedirt.webp",
+    imagePos: "left",
+    href: "https://www.behance.net/gallery/160693055/Responsive-website",
+    external: true,
+  },
 ];
