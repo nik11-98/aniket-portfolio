@@ -12,7 +12,7 @@
   gap: 0.85rem;
   width: max-content;
   padding-inline: 0.85rem;
-  animation: scroll 34s linear infinite;
+  animation: scroll 26s linear infinite;
   will-change: transform;
 }
 .track:hover { animation-play-state: paused; }

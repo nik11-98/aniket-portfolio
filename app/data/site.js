@@ -84,11 +84,19 @@ export const skills = [
 
 export const stats = [
   { value: "4+", label: "Years of experience" },
-  { value: "5", label: "Companies & studios" },
+  { value: "6", label: "Companies & studios" },
   { value: "2", label: "UX grad certificates" },
 ];
 
 export const experience = [
+  {
+    company: "Peaches",
+    logo: "/logos/peaches.svg",
+    role: "Product / UI/UX Designer",
+    period: "Apr 2026 – Present",
+    summary:
+      "Own the end-to-end design process for data-heavy dashboards, insights, and analytics platforms, from concept to high-fidelity execution. Use design systems and AI tools like Claude to structure complex telemetry screens and speed up iteration, collaborating closely with marketing and backend teams.",
+  },
   {
     company: "Futura Sound",
     logo: "/logos/futura.png",

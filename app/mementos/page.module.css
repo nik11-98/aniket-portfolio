@@ -7,9 +7,9 @@
 }
 .title {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 600;
   font-size: var(--t-h1);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   line-height: 1.05;
 }
 .sub {

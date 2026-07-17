@@ -52,12 +52,12 @@
 
 .headline {
   font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: 600;
   font-size: var(--t-display);
-  line-height: 1.04;
-  letter-spacing: -0.015em;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: var(--ink);
-  max-width: 16ch;
+  max-width: 18ch;
   margin: var(--s-3) auto 0;
 }
 .headline em {
